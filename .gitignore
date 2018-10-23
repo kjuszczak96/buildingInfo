@@ -24,3 +24,7 @@ hs_err_pid*
 
 # compiled output
 /target
+
+
+#IDE folders
+/.idea
