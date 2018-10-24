@@ -22,8 +22,7 @@ public class ObjectController {
         for (int i = 0; i < 100; i++)
             list.add(
                     new SimpleObject(counter.incrementAndGet(),
-                            String.format(template, name),
-                            counter.incrementAndGet()*100));
+                            String.format(template, name)));
         return list;
     }
 }
