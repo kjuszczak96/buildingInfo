@@ -6,10 +6,6 @@ public class Room extends Location {
   private float heating;
   private float light;
 
-  public Room(long id, String name, float area) {
-    super(id, name);
-  }
-
   public float getArea() {
     return area;
   }
