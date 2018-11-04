@@ -8,7 +8,12 @@ public class Building extends Location {
   }
 
   public float getArea() {
-    return 1;
+    float area = 0;
+    for(int i = 0; i < levels.length; i++)
+    {
+      area = area + levels[i].getArea();
+    }
+    return area;
   }
 
   public float getVolume() {
