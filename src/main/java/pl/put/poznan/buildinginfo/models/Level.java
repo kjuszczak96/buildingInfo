@@ -6,4 +6,16 @@ public class Level extends Location {
   public Room[] getRooms() {
     return rooms;
   }
+
+  public float getArea() {
+    return 2;
+  }
+
+  public float getVolume() {
+    return 2;
+  }
+
+  public float getIlluminationPower() {
+    return 2;
+  }
 }
