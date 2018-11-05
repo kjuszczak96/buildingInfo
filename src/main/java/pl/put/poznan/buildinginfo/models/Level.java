@@ -12,7 +12,11 @@ public class Level extends Location {
   }
 
   public float getVolume() {
-    return 2;
+    float totalVolume = 0;
+    for (Room room : rooms) {
+      totalVolume += room.getVolume();
+    }
+    return totalVolume;
   }
 
   public float getIlluminationPower() {
