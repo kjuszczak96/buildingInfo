@@ -16,6 +16,9 @@ public class Building extends Location {
   }
 
   public float getIlluminationPower() {
-    return 1;
+    float power = 0;
+    for (int i = 0; i < levels.length; i++)
+      power += levels[i].getIlluminationPower();
+    return power;
   }
 }

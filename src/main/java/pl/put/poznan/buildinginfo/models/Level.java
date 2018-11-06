@@ -16,6 +16,9 @@ public class Level extends Location {
   }
 
   public float getIlluminationPower() {
-    return 2;
+    float power = 0;
+    for (int i = 0; i < rooms.length; i++)
+      power += rooms[i].getIlluminationPower();
+    return power;
   }
 }
