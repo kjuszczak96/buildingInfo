@@ -27,12 +27,12 @@ hs_err_pid*
 /src/main/main.iml
 
 
-#IDE folders
+#IDE files
 /.idea
 /.settings
 /.vscode
-.iml
-.ipr
-.iws
-.project
-.classpath
+*.iml
+*.ipr
+*.iws
+*.project
+*.classpath
