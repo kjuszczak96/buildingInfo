@@ -17,7 +17,11 @@ public class Building extends Location {
   }
 
   public float getVolume() {
-    return 1;
+    float totalVolume = 0;
+    for (Level level : levels) {
+      totalVolume += level.getVolume();
+    }
+    return totalVolume;
   }
 
   public float getIlluminationPower() {

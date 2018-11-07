@@ -33,7 +33,11 @@ public class Level extends Location {
   * @return A float representing total volume of all rooms that level consists of.
   */
   public float getVolume() {
-    return 2;
+    float totalVolume = 0;
+    for (Room room : rooms) {
+      totalVolume += room.getVolume();
+    }
+    return totalVolume;
   }
 
   /**
