@@ -17,17 +17,20 @@ public abstract class BuildingInfoController<T extends Location> {
 
   @RequestMapping(value = "/get_area", method = RequestMethod.POST, produces = "application/json")
   public float getArea(@RequestBody T location) {
-    return location.getArea();
+      logger.debug("User requests data of building with id = " + location.getId() + " and name = " + location.getName());
+      return location.getArea();
   }
 
   @RequestMapping(value = "/get_volume", method = RequestMethod.POST, produces = "application/json")
   public float getVolume(@RequestBody T location) {
-    return location.getVolume();
+      logger.debug("User requests data of building with id = " + location.getId() + " and name = " + location.getName());
+      return location.getVolume();
   }
 
   @RequestMapping(value = "/get_illumination_power", method = RequestMethod.POST, produces = "application/json")
   public float getIlluminationPower(@RequestBody T location) {
-    return location.getIlluminationPower();
+      logger.debug("User requests data of building with id = " + location.getId() + " and name = " + location.getName());
+      return location.getIlluminationPower();
   }
 }
 
