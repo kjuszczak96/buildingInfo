@@ -24,8 +24,6 @@ hs_err_pid*
 
 # compiled output
 /target
-/src/main/main.iml
-
 
 #IDE files
 /.idea
