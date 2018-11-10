@@ -60,7 +60,7 @@ POST http://localhost:8080/building/get_area
   ]
 }
 ```
-#Some other endpoints you can call:
+### Some other endpoints you can call:
 Get area
 * http://localhost:8080/room/get_area
 * http://localhost:8080/level/get_area
@@ -77,9 +77,15 @@ Get lighting power
 * http://localhost:8080/building/get_illumination_power
 
 
+### Generate javadoc
+```
+mvn javadoc:javadoc
+```
+
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management 
+* [Spring Boot](http://spring.io/projects/spring-boot)
 
 ## Authors
 
