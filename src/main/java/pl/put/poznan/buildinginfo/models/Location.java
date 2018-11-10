@@ -1,6 +1,6 @@
 package pl.put.poznan.buildinginfo.models;
 
-public class Location {
+public abstract class Location {
   private long id;
   private String name;
   
@@ -15,4 +15,9 @@ public class Location {
   public String getName() {
     return name;
   }
+
+  public abstract float getArea();
+  public abstract float getVolume();
+  public abstract float getIlluminationPower();
+
 }

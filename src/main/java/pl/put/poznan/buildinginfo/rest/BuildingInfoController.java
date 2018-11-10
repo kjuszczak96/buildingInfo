@@ -3,28 +3,34 @@ package pl.put.poznan.buildinginfo.rest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import pl.put.poznan.buildinginfo.models.Location;
 
 @RestController
-public class BuildingInfoController {
+public abstract class BuildingInfoController<T extends Location> {
 
-  private static final Logger logger = LoggerFactory.getLogger(BuildingInfoController.class);
+  public static final Logger logger = LoggerFactory.getLogger(BuildingInfoController.class);
 
-  @RequestMapping(value = "/get_building", method = RequestMethod.GET, produces = "application/json")
-  public void get(@RequestParam(value="id") long id) {
-    logger.debug("User requests data of building with id = " + Long.toString(id));
+  @RequestMapping(value = "/get_area", method = RequestMethod.POST, produces = "application/json")
+  public float getArea(@RequestBody T location) {
+      logger.debug("User requests data of building with id = " + location.getId() + " and name = " + location.getName());
+      return location.getArea();
   }
 
-  @RequestMapping(value = "/add_building", method = RequestMethod.POST, produces = "application/json")
-  public Location post(@RequestBody Location building) {
-    logger.debug("User attempting to add new building with name = " + building.getName() + ", id = " + building.getId());
+  @RequestMapping(value = "/get_volume", method = RequestMethod.POST, produces = "application/json")
+  public float getVolume(@RequestBody T location) {
+      logger.debug("User requests data of building with id = " + location.getId() + " and name = " + location.getName());
+      return location.getVolume();
+  }
 
-    return building;
+  @RequestMapping(value = "/get_illumination_power", method = RequestMethod.POST, produces = "application/json")
+  public float getIlluminationPower(@RequestBody T location) {
+      logger.debug("User requests data of building with id = " + location.getId() + " and name = " + location.getName());
+      return location.getIlluminationPower();
   }
 }
+

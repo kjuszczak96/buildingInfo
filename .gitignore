@@ -25,10 +25,12 @@ hs_err_pid*
 # compiled output
 /target
 
-
-#IDE folders
+#IDE files
 /.idea
 /.settings
 /.vscode
-.project
-.classpath
+*.iml
+*.ipr
+*.iws
+*.project
+*.classpath
