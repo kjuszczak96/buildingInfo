@@ -48,6 +48,8 @@ public class Level extends Location {
     float power = 0;
     for (int i = 0; i < rooms.length; i++)
       power += rooms[i].getIlluminationPower();
+    float area = getArea();
+    power = power / area;
     return power;
   }
 }
