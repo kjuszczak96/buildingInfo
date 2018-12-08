@@ -19,5 +19,9 @@ public abstract class Location {
   public abstract float getArea();
   public abstract float getVolume();
   public abstract float getIlluminationPower();
+  public abstract void sortRooms(String parameter);
+  public abstract void sortByClosestArea(float area);
+  public abstract void compareBuildings(Location otherBuilding);
+
 
 }

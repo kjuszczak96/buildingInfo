@@ -43,4 +43,9 @@ public class Room extends Location {
   public float getIlluminationPower() {
     return illuminationPower;
   }
+  public void sortRooms(String parameter){}
+  public void sortByClosestArea(float area){}
+
+    @Override
+    public void compareBuildings(Location otherBuilding) {}
 }
