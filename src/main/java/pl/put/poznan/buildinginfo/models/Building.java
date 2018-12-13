@@ -1,12 +1,15 @@
 package pl.put.poznan.buildinginfo.models;
 
+import pl.put.poznan.buildinginfo.interfaces.Visitable;
+import pl.put.poznan.buildinginfo.interfaces.Visitor;
+
 import java.util.Arrays;
 
 /** Represents a building. Allows calculating and obtaining information about the building.
  * @since 0.1
  */
 
-public class Building extends Location {
+public class Building extends Location implements Visitable {
 
   /** Represents list of levels the building consists of.
    */
@@ -18,6 +21,14 @@ public class Building extends Location {
    */
   public Level[] getLevels() {
     return levels;
+  }
+
+  /**
+   * <p>Visitor method.</p>
+   */
+  @Override
+  public void accept(Visitor visitor){
+      visitor.visit(this);
   }
 
   /**
