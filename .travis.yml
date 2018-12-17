@@ -1,1 +1,9 @@
 language: java
+
+deploy:
+  provider: releases
+  api_key: "0ee3961e32109ce3a66dabc7bd0cfe2004bc8d64"
+  file: "test"
+  skip_cleanup: true
+  on:
+    tags: true
