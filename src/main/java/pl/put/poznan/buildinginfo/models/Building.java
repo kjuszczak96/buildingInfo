@@ -8,10 +8,13 @@ import java.util.Arrays;
 
 public class Building extends Location {
 
-  /** Represents list of levels the building consists of.
+    /** Represents list of levels the building consists of.
    */
   private Level[] levels;
 
+  public void setLevels(Level[] levels) {
+      this.levels = levels;
+  }
   /**
    * <p>Gets list of levels that building consists of.</p>
    * @return A float representing total area of the building.

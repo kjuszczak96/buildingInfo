@@ -16,6 +16,22 @@ public class Room extends Location {
   private float heatingPowerConsumption;
   private float illuminationPower;
 
+  public void setArea(float area) {
+    this.area = area;
+  }
+
+  public void setVolume(float volume) {
+    this.volume = volume;
+  }
+
+  public void setHeatingPowerConsumption(float heatingPowerConsumption) {
+    this.heatingPowerConsumption = heatingPowerConsumption;
+  }
+
+  public void setIlluminationPower(float illuminationPower) {
+    this.illuminationPower = illuminationPower;
+  }
+
   /**
    * <p>Gets area of the room.</p>
    * @return A float representing total area of the room.

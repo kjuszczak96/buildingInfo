@@ -19,6 +19,10 @@ public class Level extends Location {
   public Room[] getRooms() {
     return rooms;
   }
+
+  public void setRooms(Room[] _rooms){
+      this.rooms = _rooms;
+  }
   /**
   * <p>Gets total area of level.</p>
   * @return A float representing total area of all rooms that level consists of.
